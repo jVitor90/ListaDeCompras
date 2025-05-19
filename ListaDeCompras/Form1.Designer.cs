@@ -33,6 +33,7 @@
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.TxtbCadastrar = new System.Windows.Forms.TextBox();
             this.LblAviso = new System.Windows.Forms.Label();
+            this.BtnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LstbListaDeCompras
@@ -54,7 +55,7 @@
             this.BtnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrar.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.BtnCadastrar.Location = new System.Drawing.Point(729, 152);
+            this.BtnCadastrar.Location = new System.Drawing.Point(733, 91);
             this.BtnCadastrar.Name = "BtnCadastrar";
             this.BtnCadastrar.Size = new System.Drawing.Size(252, 81);
             this.BtnCadastrar.TabIndex = 1;
@@ -69,7 +70,7 @@
             this.BtnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLimpar.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.BtnLimpar.Location = new System.Drawing.Point(729, 266);
+            this.BtnLimpar.Location = new System.Drawing.Point(733, 205);
             this.BtnLimpar.Name = "BtnLimpar";
             this.BtnLimpar.Size = new System.Drawing.Size(252, 88);
             this.BtnLimpar.TabIndex = 3;
@@ -81,12 +82,13 @@
             // 
             this.TxtbCadastrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtbCadastrar.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtbCadastrar.Location = new System.Drawing.Point(729, 105);
+            this.TxtbCadastrar.Location = new System.Drawing.Point(733, 44);
             this.TxtbCadastrar.Multiline = true;
             this.TxtbCadastrar.Name = "TxtbCadastrar";
             this.TxtbCadastrar.Size = new System.Drawing.Size(252, 18);
             this.TxtbCadastrar.TabIndex = 4;
-            this.TxtbCadastrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtbCadastrar_KeyDown);
+            this.TxtbCadastrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtbCadastrar_KeyDown_1);
+            this.TxtbCadastrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtbCadastrar_KeyPress);
             // 
             // LblAviso
             // 
@@ -99,6 +101,21 @@
             this.LblAviso.TabIndex = 5;
             this.LblAviso.Text = "Clique duas vezes para excluir algum item ";
             // 
+            // BtnSair
+            // 
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSair.BackgroundImage = global::ListaDeCompras.Properties.Resources.Sem_Título_2;
+            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSair.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSair.ForeColor = System.Drawing.Color.Black;
+            this.BtnSair.Location = new System.Drawing.Point(733, 325);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(252, 88);
+            this.BtnSair.TabIndex = 7;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.UseVisualStyleBackColor = false;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -108,6 +125,7 @@
             this.BackgroundImage = global::ListaDeCompras.Properties.Resources.Fundolistadecompras4_0;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1093, 485);
+            this.Controls.Add(this.BtnSair);
             this.Controls.Add(this.LblAviso);
             this.Controls.Add(this.TxtbCadastrar);
             this.Controls.Add(this.BtnLimpar);
@@ -128,6 +146,7 @@
         private System.Windows.Forms.Button BtnLimpar;
         private System.Windows.Forms.TextBox TxtbCadastrar;
         private System.Windows.Forms.Label LblAviso;
+        private System.Windows.Forms.Button BtnSair;
     }
 }
 
